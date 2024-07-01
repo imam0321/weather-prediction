@@ -1,10 +1,10 @@
-import TempMaxIcon from "../../assets/icons/temp-max.svg";
-import TempMinIcon from "../../assets/icons/temp-min.svg";
-import HumidityIcon from "../../assets/icons/humidity.svg";
-import CloudIcon from "../../assets/icons/cloud.svg";
-import WindIcon from "../../assets/icons/wind.svg";
-import { useContext } from "react";
-import { WeatherContext } from "../../context";
+import TempMaxIcon from '../../assets/icons/temp-max.svg'
+import TempMinIcon from '../../assets/icons/temp-min.svg'
+import HumidityIcon from '../../assets/icons/humidity.svg'
+import CloudIcon from '../../assets/icons/cloud.svg'
+import WindIcon from '../../assets/icons/wind.svg'
+import { useContext } from 'react'
+import { WeatherContext } from '../../context'
 
 function WeatherCondition() {
   const { weatherData } = useContext(WeatherContext);
@@ -16,7 +16,7 @@ function WeatherCondition() {
     cloudPercentage,
     climate,
   } = weatherData;
-
+  
   return (
     <div>
       <p className="text-sm lg:text-lg font-bold uppercase mb-8">
