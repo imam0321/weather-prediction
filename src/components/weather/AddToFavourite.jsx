@@ -8,13 +8,13 @@ function AddToFavourite() {
     useContext(FavouriteContext);
   const { weatherData } = useContext(WeatherContext);
 
-  const [isFavourite, toggoleFavourite] = useState(false);
+  const [isFavourite, toggleFavourite] = useState(false);
 
   const { latitude, longitude, location } = weatherData;
 
   useEffect(() => {
     const found = favourites.find((fav) => fav.location === location);
-    toggoleFavourite(found);
+    toggleFavourite(found);
   }, []);
 
   function handleFavourite() {
@@ -24,7 +24,7 @@ function AddToFavourite() {
     } else {
       removeFromFavourites(location);
     }
-    toggoleFavourite(!isFavourite);
+    toggleFavourite(!isFavourite);
   }
 
   return (

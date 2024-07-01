@@ -1,7 +1,9 @@
+import { useState } from "react";
 import SearchIcon from "../../assets/search.svg";
 
 
 function Search() {
+  const [] = useState();
 
   return (
     <form action="#">
