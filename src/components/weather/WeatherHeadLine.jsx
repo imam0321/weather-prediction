@@ -39,7 +39,7 @@ function WeatherHeadLine() {
           </h1>
           <div className="flex items-center space-x-2 md:mb-4">
             <img src={PinIcon} alt="Pin Icon" />
-            <h2 className="text-2xl lg:text-[50px] text-nowrap">{location}</h2>
+            <h2 className="text-2xl lg:text-[50px]">{location}</h2>
           </div>
         </div>
       </div>

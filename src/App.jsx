@@ -1,9 +1,8 @@
 import "./App.css";
 import Header from "./components/header/Header";
 import WeatherBoard from "./components/weather/WeatherBoard.jsx";
-import FavouriteProvider from "./providers/FavouriteProvider.jsx";
-import LocationProvider from "./providers/LocationProvider.jsx";
-import WeatherProvider from "./providers/WeatherProvider.jsx";
+import {LocationProvider, WeatherProvider, FavouriteProvider } from './providers/index.js'
+
 
 function App() {
   return (
