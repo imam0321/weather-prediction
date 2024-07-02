@@ -28,7 +28,7 @@ const useWeather = () => {
       setLoading({
         ...loading,
         state: true,
-        message: "Fetching Weather Data....",
+        message: "Loading Weather Data....",
       });
       const res = await fetch(
         `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${
@@ -69,7 +69,8 @@ const useWeather = () => {
 
   useEffect(() => {
     setLoading({
-      loading: true,
+      ...loading,
+      state: true,
       message: "Finding location...",
     });
 
