@@ -1,7 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { LocationContext } from "../context";
 import moment from "moment-timezone";
-// import moment from "moment-timezone";
 
 const useWeather = () => {
   const [weatherData, setWeatherData] = useState({
@@ -43,6 +42,11 @@ const useWeather = () => {
       }
       const data = await res.json();
 
+      const timezoneOffset = data.timezone * 1000;
+      const localTime = moment
+        .utc(data.dt * 1000)
+        .add(timezoneOffset, "milliseconds")
+        .format("h:mm A - dddd, MMMM D, YYYY");
 
       const updateWeatherData = {
         ...weatherData,
@@ -54,7 +58,7 @@ const useWeather = () => {
         humidity: data?.main?.humidity,
         cloudPercentage: data?.clouds?.all,
         wind: data?.wind?.speed,
-        time: data.dt,
+        time: localTime,
         longitude: longitude,
         latitude: latitude,
       };

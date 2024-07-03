@@ -6,7 +6,6 @@ import RainyIcon from "../../assets/rainy.svg";
 import ThunderIcon from "../../assets/thunder.svg";
 import PinIcon from "../../assets/pin.svg";
 import { WeatherContext } from "../../context";
-import { getFormattedDate } from "../../utils/date-util";
 
 function WeatherHeadLine() {
   const { weatherData } = useContext(WeatherContext);
@@ -43,10 +42,7 @@ function WeatherHeadLine() {
           </div>
         </div>
       </div>
-      <p className="text-sm lg:text-lg">
-        {getFormattedDate(time, "time")} -{" "}
-        {getFormattedDate(time, "date", false)}
-      </p>
+      <p className="text-sm lg:text-lg">{time}</p>
     </div>
   );
 }
