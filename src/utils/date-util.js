@@ -27,3 +27,4 @@ function getFormattedDate(value, type, inMS) {
 }
 
 export { getFormattedDate };
+

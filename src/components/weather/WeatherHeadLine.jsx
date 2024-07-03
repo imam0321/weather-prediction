@@ -14,7 +14,7 @@ function WeatherHeadLine() {
 
   function getWeatherIcon(climate) {
     switch (climate) {
-      case "Rainy":
+      case "Rain":
         return RainyIcon;
       case "Cloud":
         return CloudIcon;
@@ -44,7 +44,7 @@ function WeatherHeadLine() {
         </div>
       </div>
       <p className="text-sm lg:text-lg">
-        {getFormattedDate(time, "time", false)} -{" "}
+        {getFormattedDate(time, "time")} -{" "}
         {getFormattedDate(time, "date", false)}
       </p>
     </div>
